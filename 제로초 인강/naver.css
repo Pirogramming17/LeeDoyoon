@@ -22,10 +22,25 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
 
 /* #header-search > h1 : 자식을 찾는 것( (바로 아래 들어있는)
    #header-search h1 : 자손을 찾는 것 */
-#header-search > h1{
-    width: 280px;
-    /* div의 속성은 bolck이므로 나란히 배치하려면 inline-block으로 바꾸어줘야함 */
+#header-search h1{
     display: inline-block;
+    width: 222px;
+    height: 52px;
+    /*  
+    background-position: 0 -158px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
+    background-repeat: no-repeat;
+    */
+    background: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png) 0px -158px no-repeat;
+    background-size: 457px 434px;
+}
+
+#header-search a{
+    text-decoration: none;
+}
+
+#header-search h1 span {
+    display: none;
 }
 
 #header-search h2{
@@ -38,4 +53,13 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
 #header-search fieldset{
     width: 520px;
     display: inline-block;
+}
+
+#header-search fieldset{
+    margin-left: 20px;
+    padding: 12px 0 12px 10px;
+    width: 586px;
+    height: 56px;
+    display: inline-block;
+    border: 2px solid #19ce60;
 }
