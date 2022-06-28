@@ -16,16 +16,17 @@
         <!-- header : 가장 눈에 잘 띠고 위에 있는 부분 -->
         <header>
             <!-- fixed의 containig block은 parent가 아니라 body이다 -->
-            
-            <div id ="fixed">고정</div> <!-- 가운데 정렬용 div -->
+            <!-- 가운데 정렬용 div -->
             <div class = "center-align">
                 <!-- span: display가 inline-block이 아닌 lniine임 
                 display: block -> width가 있든 없든 너비를 100% 다 차지함
                 display: inlinee -> 자신의 컨텐츠만큼만을 차지함 / 빈공간 마련 불가능
                 display: inline-block -> block과 inline을 합친 것 width, height 지정 가능-->
-                <span>네이버를 시작페이지로</span>
-                <span>쥬니어네이버</span>
-                <span>해피빈</span>
+                <div id="header-top">
+                    <span>네이버를 시작페이지로 | </span>
+                    <span>쥬니어네이버 | </span>
+                    <span>해피빈</span>
+                </div>
 
                 <div id = "header-search">       
                     <a href="https://www.naver.com">  <!-- a tag: 버튼 누르면 이동하는 링크(부가정보, 속성, attribute) -->
