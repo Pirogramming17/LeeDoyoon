@@ -5,6 +5,10 @@
 /* class와 ID의 차이점
 ID: 고유한 것 
 clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러개 클래스 동시 적용 가능 */
+* {
+    box-sizing: border-box;
+}
+
 .blind{
     position: absolute;
     overflow: hidden;
@@ -37,6 +41,7 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
 
 #header-search a{
     text-decoration: none;
+    vertical-align: middle;
 }
 
 #header-search h1 span {
@@ -53,6 +58,7 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
 #header-search fieldset{
     width: 520px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 #header-search fieldset{
@@ -62,4 +68,10 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     height: 56px;
     display: inline-block;
     border: 2px solid #19ce60;
+}
+
+#header-search fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
 }
