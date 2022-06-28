@@ -9,6 +9,22 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     box-sizing: border-box;
 }
 
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#fixed{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
 .blind{
     position: absolute;
     overflow: hidden;
@@ -90,8 +106,7 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     padding: 0;
     background: #19ce60;
     position: absolute;
-    position: absolute;
-    top: -3px;
+    top: -2px;
     right: 0;
     bottom: 0;
 
@@ -105,5 +120,13 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     background-position: -420px 0;
     background-repeat: no-repeat;
     background-size: 457px 434px;
+    /*  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    */
+
+
 }
 
