@@ -138,18 +138,47 @@ nav li{
     display: inline-block
 }
 
-nav li span:first-child{
-    display: inline-block;
-
+/* css 우선순위 존재함 
+기본적으로 뒤에 나오는 css가 우선순위가 높음
+!important > inline style attribute > ID > 다른 attribute (class) > tag element순으로 높음
+금 : id
+은 : class
+동 : tag */
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0;
 }
 
-nav li:first-child span:first-child{
-    width: 21px;
-    height: 21px;
-    background-position: -420px -73px;
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
     background-repeat: no-repeat;
-    vertical-align: top;
-    margin: 3px 9px 0 0;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
-    background-size: 457px 434px;
+    margin-left: 14px;
+}
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
 }
