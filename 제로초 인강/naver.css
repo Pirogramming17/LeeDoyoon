@@ -2,6 +2,19 @@
 /* parent에 적용된 속성이 child에게 덮어씌워짐 */
 /* 선택자 (selector) */
 
+/* class와 ID의 차이점
+ID: 고유한 것 
+clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러개 클래스 동시 적용 가능 */
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+
+}
+
 #header-center{
     margin: 0 auto;
     width: 1080px;
@@ -16,6 +29,9 @@
 }
 
 #header-search h2{
+    /* screen reader에게도 보이지 않음
+    그렇다면 존재하는 이유는? html이 문서 역할을 하기 때문에 html에서 두번째로 중요한 역할이라는 것을 알려주기 위해 존재
+    screen reader에게는 보이지만 사람 눈에는 안보이게 하기 위해서 */
     display: none;
 }
 
