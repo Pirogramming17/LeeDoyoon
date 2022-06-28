@@ -35,7 +35,7 @@ html, body{
 
 }
 
-#header-center{
+.center-align{
     margin: 0 auto;
     width: 1080px;
 }
@@ -120,13 +120,36 @@ html, body{
     background-position: -420px 0;
     background-repeat: no-repeat;
     background-size: 457px 434px;
-    /*  
+    /*  세로 가운데 정렬
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
     */
+}
 
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block
+}
+
+nav li span:first-child{
+    display: inline-block;
 
 }
 
+nav li:first-child span:first-child{
+    width: 21px;
+    height: 21px;
+    background-position: -420px -73px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    margin: 3px 9px 0 0;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
+    background-size: 457px 434px;
+}
