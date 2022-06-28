@@ -1,0 +1,8 @@
+/* CSS: Cascading Style Sheet */
+/* parent에 적용된 속성이 child에게 덮어씌워짐 */
+/* 선택자 (selector) */
+
+#header-center{
+    margin: 0 auto;
+    width: 1080px;
+}

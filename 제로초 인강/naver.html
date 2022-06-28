@@ -6,8 +6,9 @@
         <meta charset = "utf-8" /> 
         <!-- 빈 태그일 땐 하나의 태그로 />로 끝낼 수 있음 -->
         <title>Naver</title>
-        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
         <!-- / : 프로젝트의 최상위 폴더 , ./ : 현재 폴더  -->
+        <link rel="stylesheet" href="./naver.css">
     </head>
 
     <!-- main 부분 -->
@@ -15,17 +16,20 @@
         <!-- header : 가장 눈에 잘 띠고 위에 있는 부분 -->
         <header>
         <!-- a tag: 버튼 누르면 이동하는 링크(부가정보, 속성, attribute) -->
-            <h1>
-                <a href="https://www.naver.com">Naver</a> 
-            </h1>
-            <h2>검색창</h2>
-            <fieldset>
-                <!-- legend : 범례 -->
-                <legend>검색</legend>
-                <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
-                <input />
-                <button>검색</button>
-            </fieldset>
+        <!-- 가운데 정렬용 div -->
+            <div id = "header-center">
+                <h1>
+                    <a href="https://www.naver.com">Naver</a> 
+                </h1>
+                <h2>검색창</h2>
+                <fieldset>
+                    <!-- legend : 범례 -->
+                    <legend>검색</legend>
+                    <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
+                    <input />
+                    <button>검색</button>
+                </fieldset>
+            </div>
         </header>
 
         <nav>
@@ -54,13 +58,13 @@
 
             <h3>언론사 목록</h3>
             <ul>
-                <li> <img src="./한국일보.png" alt="한국일보" alt=""></li>
-                <li> <img src="./SBS.png" alt="SBS"></li>
-                <li> <img src="./MBC.png" alt="SBS"></li>
-                <li> <img src="./매일경제.png" alt="SBS"></li>
-                <li> <img src="./스포츠조선.png" alt="SBS"></li>
-                <li> <img src="./한겨례.png" alt="SBS"></li>
-                <li> <img src="./YTN.png" alt="SBS"></li>
+                <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
+                <li> <img src="img/SBS.png" alt="SBS"></li>
+                <li> <img src="img/MBC.png" alt="SBS"></li>
+                <li> <img src="img/매일경제.png" alt="SBS"></li>
+                <li> <img src="img/스포츠조선.png" alt="SBS"></li>
+                <li> <img src="img/한겨례.png" alt="SBS"></li>
+                <li> <img src="img/YTN.png" alt="SBS"></li>
             </ul>
             <h3>로그인</h3>
             <h3>뉴스</h3>
