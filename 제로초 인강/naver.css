@@ -37,6 +37,8 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     */
     background: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png) 0px -158px no-repeat;
     background-size: 457px 434px;
+    position: relative;
+    top: -3px;
 }
 
 #header-search a{
@@ -68,12 +70,17 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     height: 56px;
     display: inline-block;
     border: 2px solid #19ce60;
+    position: relative;
 }
 
 #header-search fieldset input{
+    width: 444px;
+    height: 24px;
+    padding: 13px 15px;
+    margin: 1px;
     border: none;
-    padding: 0;
     outline: none;
+    vertical-align: top;
 }
 
 #header-search fieldset button{
@@ -82,6 +89,12 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     border: none;
     padding: 0;
     background: #19ce60;
+    position: absolute;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    bottom: 0;
+
 }
 
 #search-image{
