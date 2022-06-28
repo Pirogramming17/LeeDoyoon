@@ -75,3 +75,22 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
     padding: 0;
     outline: none;
 }
+
+#header-search fieldset button{
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding: 0;
+    background: #19ce60;
+}
+
+#search-image{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
+    background-position: -420px 0;
+    background-repeat: no-repeat;
+    background-size: 457px 434px;
+}
+
