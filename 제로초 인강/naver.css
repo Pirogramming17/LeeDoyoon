@@ -6,3 +6,20 @@
     margin: 0 auto;
     width: 1080px;
 }
+
+/* #header-search > h1 : 자식을 찾는 것( (바로 아래 들어있는)
+   #header-search h1 : 자손을 찾는 것 */
+#header-search > h1{
+    width: 280px;
+    /* div의 속성은 bolck이므로 나란히 배치하려면 inline-block으로 바꾸어줘야함 */
+    display: inline-block;
+}
+
+#header-search h2{
+    display: none;
+}
+
+#header-search fieldset{
+    width: 520px;
+    display: inline-block;
+}

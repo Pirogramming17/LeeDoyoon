@@ -18,18 +18,28 @@
         <!-- a tag: 버튼 누르면 이동하는 링크(부가정보, 속성, attribute) -->
         <!-- 가운데 정렬용 div -->
             <div id = "header-center">
-                <h1>
-                    <a href="https://www.naver.com">Naver</a> 
-                </h1>
-                <h2>검색창</h2>
-                <fieldset>
-                    <!-- legend : 범례 -->
-                    <legend>검색</legend>
-                    <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
-                    <input />
-                    <button>검색</button>
-                </fieldset>
-            </div>
+                <!-- span: display가 inline-block이 아닌 lniine임 
+                display: block -> width가 있든 없든 너비를 100% 다 차지함
+                display: inlinee -> 자신의 컨텐츠만큼만을 차지함 / 빈공간 마련 불가능
+                display: inline-block -> block과 inline을 합친 것 width, height 지정 가능-->
+                <span>네이버를 시작페이지로</span>
+                <span>쥬니어네이버</span>
+                <span>해피빈</span>
+
+                <div id = "header-search">
+                    <h1>
+                        <a href="https://www.naver.com">Naver</a> 
+                    </h1>
+                    <h2>검색창</h2>
+                    <fieldset>
+                        <!-- legend : 범례 -->
+                        <legend>검색</legend>
+                        <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
+                        <input />
+                        <button>검색</button>
+                    </fieldset>
+                </div>
+            </div> 
         </header>
 
         <nav>
