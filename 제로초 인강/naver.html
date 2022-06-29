@@ -16,27 +16,29 @@
                 display: inlinee -> 자신의 컨텐츠만큼만을 차지함 / 빈공간 마련 불가능
                 display: inline-block -> block과 inline을 합친 것 width, height 지정 가능-->
                 <div id="header-top">
-                <span>네이버를 시작페이지로 > | </span>
-                <span>쥬니어네이버 | </span>
-                <span>해피빈</span>
-                </div>
-                <div id="header-search">
-                <a href="https://www.naver.com"> <!-- a tag: 버튼 누르면 이동하는 링크(부가정보, 속성, attribute) -->
-                    <h1>
-                    <span>네이버</span>
-                    </h1>
-                </a>
-                <h2 class="blind">검색창</h2>
-                <fieldset>
-                    <legend class="blind">검색</legend> <!-- legend : 범례 -->
-                    <input /> <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
-                    <span id="search-keyboard"></span>
-                    <span id="search-history"></span>
-                    <button>
-                    <span class="blind">검색</span>
-                    <span id="search-image"></span>
-                    </button>
-                </fieldset>
+                    <span>네이버를 시작페이지로 > | </span>
+                    <span>쥬니어네이버 | </span>
+                    <span>해피빈</span>
+                    </div>
+                    <div id="header-search">
+                    <a href="https://www.naver.com"> <!-- a tag: 버튼 누르면 이동하는 링크(부가정보, 속성, attribute) -->
+                        <h1>
+                            <span>네이버</span>
+                        </h1>
+                    </a>
+                    <h2 class="blind">검색창</h2>
+                    <form class="inline-block" action="https://search.naver.com/search.naver?sm=top_hty&fbm=0&ie=utf8&query="></form>
+                        <fieldset>
+                            <legend class="blind">검색</legend> <!-- legend : 범례 -->
+                            <input /> <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
+                            <span id="search-keyboard"></span>
+                            <span id="search-history"></span>
+                            <button type="submit">
+                                <span class="blind">검색</span>
+                                <span id="search-image"></span>
+                            </button>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </header>
@@ -121,75 +123,68 @@
             </div>
         </nav>
 
-        <main> <!-- main : main contents가 있는 부분 / 웹사이트에서 딱 한번 써야함(제약조건))-->
-            <div id="main-centered" class="center-align">
-                <div id="main-first-block">
-                    <div id="main-ad"></div>
-                    <div id="main-login">
-                        <h3>로그인</h3>
+    <main> <!-- main : main contents가 있는 부분 / 웹사이트에서 딱 한번 써야함(제약조건))-->
+        <div id="main-centered" class="center-align">
+            <div id="main-first-block">
+                <div id="main-ad"></div>
+                <div id="main-login">
+                    <h3 class="blind">로그인</h3>
                 </div>
             </div>
 
-            <div id="main-second-block">
-                <div class="float-left">
-                    <div id="main-ytn">
-                        <h3>연합뉴스</h3>
-                        <ol>
-                            <li>충격) 제로초 지금 목아파...</li>
-                        </ol>
-                    </div>
-                    <div id="main-newsstand">
-                        <h3>뉴스스탠드</h3>
-                        <ul>
-                            <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
-                            <li> <img src="img/SBS.png" alt="SBS"></li>
-                            <li> <img src="img/MBC.png" alt="MBC"></li>
-                            <li> <img src="img/매일경제.png" alt="매일경제"></li>
-                            <li> <img src="img/스포츠조선.png" alt="스포츠조선"></li>
-                            <li> <img src="img/한겨례.png" alt="한겨례"></li>
-                            <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
-                            <li> <img src="img/SBS.png" alt="SBS"></li>
-                            <li> <img src="img/MBC.png" alt="MBC"></li>
-                            <li> <img src="img/매일경제.png" alt="매일경제"></li>
-                            <li> <img src="img/스포츠조선.png" alt="스포츠조선"></li>
-                            <li> <img src="img/한겨례.png" alt="한겨례"></li>
-                            <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
-                            <li> <img src="img/SBS.png" alt="SBS"></li>
-                            <li> <img src="img/MBC.png" alt="MBC"></li>
-                            <li> <img src="img/매일경제.png" alt="매일경제"></li>
-                            <li> <img src="img/스포츠조선.png" alt="스포츠조선"></li>
-                            <li> <img src="img/한겨례.png" alt="한겨례"></li>
-                            
-                                
-                        </ul>
-                    </div>
+        <div id="main-second-block">
+            <div class="float-left">
+                <div id="main-ytn">
+                    <h3>연합뉴스</h3>
+                    <ol>
+                        <li>충격) 제로초 지금 목아파...</li>
+                    </ol>
                 </div>
-                
-                <div class="float-left">
-                    <div id="main-weather"></div>
-                    <div id="main-second-ad"></div>
-                </div>
+            <div id="main-newsstand">
+                <h3>뉴스스탠드</h3>
+                <ul>
+                    <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
+                    <li> <img src="img/SBS.png" alt="SBS"></li>
+                    <li> <img src="img/MBC.png" alt="MBC"></li>
+                    <li> <img src="img/매일경제.png" alt="매일경제"></li>                        <li> <img src="img/스포츠조선.png" alt="스포츠조선"></li>
+                    <li> <img src="img/한겨례.png" alt="한겨례"></li>
+                    <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
+                    <li> <img src="img/SBS.png" alt="SBS"></li>
+                    <li> <img src="img/MBC.png" alt="MBC"></li>
+                    <li> <img src="img/매일경제.png" alt="매일경제"></li>                        <li> <img src="img/스포츠조선.png" alt="스포츠조선"></li>
+                    <li> <img src="img/한겨례.png" alt="한겨례"></li>
+                    <li> <img src="img/한국일보.png" alt="한국일보" alt=""></li>
+                    <li> <img src="img/SBS.png" alt="SBS"></li>                        <li> <img src="img/MBC.png" alt="MBC"></li>
+                    <li> <img src="img/매일경제.png" alt="매일경제"></li>
+                    <li> <img src="img/스포츠조선.png" alt="스포츠조선"></li>
+                    <li> <img src="img/한겨례.png" alt="한겨례"></li>
+                </ul>
             </div>
-                
-            <div id="main-third-block">
-                <div id="main-category">
-                    <h3>주제별 보기</h3>
-                </div>
-                <div id="main-shopping">
-                    <iframe
-                        src="https://castbox.shopping.naver.com/shopbox/main.nhn?"
-                        frameborder="0" scrolling="no"></iframe>
-                </div>
+        </div> 
+            <div class="float-left">
+                <div id="main-weather"></div>
+                <div id="main-second-ad"></div>
             </div>
+        </div>
                 
-            <div id="main-fourth-block">
-                <div id="main-event">
-                    <h3>이벤트</h3>
-                </div>
-                <div id="main-third-ad"></div>
-                </div>
+        <div id="main-third-block">
+            <div id="main-category">
+                <h3>주제별 보기</h3>
             </div>
-        </main>
+            <div id="main-shopping">
+            <iframe
+            src="https://castbox.shopping.naver.com/shopbox/main.nhn?"
+            frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+                
+        <div id="main-fourth-block">
+            <div id="main-event">
+                <h3>이벤트</h3>
+            </div>
+            <div id="main-third-ad"></div>
+        </div>
+    </main>
 
         <footer><!-- footer : 부가적인 정보 -->
             <div>공지사항</div>
