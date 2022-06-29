@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub: Where the world builds software · GitHub</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="./gitpage.css">
+  </head>
+  <body>
+    <header>
+      <div class="center-align">
+        <div class="header-top">
+          <nav class="header-left-menu">
+            <div id="header-image">
+              <a href="https://github.com">
+                <h1>
+                  <span class="blind">GitHub</span> 
+                </h1>
+              </a>
+            </div>
+            <ul id="menu-list">
+              <li class="menu-items">
+                <button id="Why-GitHub-btn" class="btns" onClick="location.href=''">
+                  <span class="btn-font">Why GitHub?</span>
+                  <div class="icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button id="Team-btn" class="btns" onClick="location.href=''">
+                <span class="btn-font">Team</span>
+                </button>
+              </li>
+              <li>
+                <button id="Enterprise-btn" class="btns" onClick="location.href=''">
+                <span class="btn-font">Enterprise</span>
+                </button>
+              </li>
+              <li class="menu-items">
+                <button id="Explore-btn" class="btns" onClick="location.href=''">
+                  <span class="btn-font">Explore</span>
+                  <div class="icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button id="Marketplace-btn" class="btns" onClick="location.href=''">
+                <span class="btn-font">Marketplace</span>
+                </button>
+              </li>
+              <li class="menu-items">
+                <button id="Pricing-btn" class="btns" onClick="location.href=''">
+                  <span class="btn-font">Pricing</span>
+                  <div class="icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <div id="header-right">
+            <h2 class="blind">search section</h2>
+            <fieldset>
+              <div id="search-text">
+                <input type="text" name="Search" style="border: none; background: transparent" placeholder="Search GitHub"/> <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
+                <div id = "search-text-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  width="22" height="20" aria-hidden="true" 
+                  class="mr-1 header-search-key-slash">
+                  <path fill="none" stroke="#979A9C" 
+                  opacity=".4" d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z">
+                  </path>
+                  <path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path>
+                  </svg>
+                </div>
+              </div>  
+            </fieldset>
+            <button id="upper-sign-in-btn" onClick="location.href='https://github.com/login'">
+                <span class="button-font">Sign in</span>
+            </button>
+            <button id="upper-sign-up-btn" onClick="location.href='https://github.com/signup?user_email=&source=form-home-signup'">
+              <span class="button-font">Sign up</span>
+            </button> 
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="main-text">
+        <h1 id="BFD-text">Built for developers</h1>
+        <p id="paragraph-text">GitHub is a development platform inspired by the way you work. 
+          From <u><b>open source</b></u> to <u><b>business</b></u>, 
+          you can host and review code, manage projects, and build software alongside 50 million developers.
+        </p>
+      </div>
+      <div id="sign-up-box">
+        <div id="Username-section">
+          <span class="box-main-text">Username</span>
+          <input type="text"/>
+        </div>
+        <div id="Email-section">
+          <span class="box-main-text">Email</span>
+          <input type="text"/>
+        </div>
+        <div id="Password-section">
+          <span class="box-main-text">Password</span>
+          <input type="text"/>
+        </div>
+        <div class="text-section">
+          <span>Make sure it's at least 15 characters OR at least 8 characters including a naumber and a lowercase letter.</span>
+          <a href="">
+            <span class="link-text">
+              Learn more.
+            </span>
+          </a>
+        </div>
+        <a href="https://github.com/signup?user_email=&source=form-home-signup">
+          <button id="main-sign-up-btn">
+            Sign up for GitHub
+          </button>
+        </a>
+        <div class="text-section">
+          <span>By clicking "Sign up for GitHub", you agree to our
+          <a href="">
+            <span class="link-text">Terms of Service</span>
+          </a>
+          and
+          <a href="">
+            <span class="link-text">Privacy Statement.</span>
+          </a>
+          We'll occasionally send you account related emails.
+        </span>
+        </div>
+      </div>
+    </main>
+    <div class="lower-section">
+      <img src="img/image.jpeg" id="lower-section-img"/>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/f578b19b63.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

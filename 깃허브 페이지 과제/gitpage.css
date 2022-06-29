@@ -1,0 +1,304 @@
+*{
+  box-sizing: border-box;
+}
+
+.blind{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  vertical-align: baseline;
+}
+
+main, body{
+  background-color: rgb(67, 67, 75);
+}
+
+ul{
+  list-style: none;
+}
+
+header{
+  position: absolute;
+  top: 17px;
+  width: 100%;
+  padding: 0 50px 0 50px;
+}
+
+.header-top{
+  clear:both;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header-image h1{
+  display:inline-flex;
+  width: 40px;
+  height: 40px;
+  background: url(img/logo.png) no-repeat;
+  background-size: 40px 40px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.header-left-menu{
+  display:flex;
+  margin-left: 70px;
+}
+
+#menu-list{
+  display: inline-flex;
+  padding = 0;
+  width: 650px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 0;
+}
+
+.btn-font{
+  text-decoration: none;
+  color:white;
+  font-size: 17px;
+  display: inline-block;
+}
+
+.icon{
+  display: inline-block;
+  border=none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.702);
+  margin-left: 5px;
+}
+
+.btns{
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+#header-right{
+  display: flex;
+  padding-right: 70px;
+  height: 80px;
+  float: left;
+}
+
+#search-text{
+  display: flex;
+}
+
+#search-text-icon{
+  margin-bottom:10px;
+}
+
+#header-right fieldset{
+  border: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding: 8px 0 0 9px;
+  width: 268px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba(137, 137, 137, 0.474);
+}
+
+input::placeholder {
+  color: rgba(219, 219, 219, 0.947);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#search-text input {
+  width: 228px;
+  height: 22px;
+  padding-left: 10px;
+  font-size: 13px;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+#upper-sign-in-btn{
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  width: 60px;
+  height: 36px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+}
+
+#upper-sign-up-btn{
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  height: 36px;
+  width: 81px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.button-font{
+  display: inline-block;
+  font-size: 15px;
+  color:white;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+
+}
+
+#main-text{
+  display: inline-block;
+  width: 980px;
+  height: 695px;
+  padding: 190px 160px 0px 352px;
+}
+
+#BFD-text{
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#paragraph-text{
+  color: rgba(255, 255, 255, 0.609);
+  font-size: 20px;
+  font-weight: 300;
+  word-spacing: 3px;
+}
+
+#paragraph-text b{
+  color: white;
+}
+
+#paragraph-text u{
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.606);
+}
+
+#sign-up-box{
+  display: inline-block;
+  text-align: center;
+  width: 500px;
+  height: 550px;
+  background-color: white;
+  border-radius: 7px;
+  vertical-align: middle;
+  margin-top: -215px;
+  margin-left: 40px;
+}
+
+.box-main-text{
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: rgb(65, 65, 65);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#sign-up-box input{
+  width: 450px;
+  height: 45px;
+  padding: 5px 20px;
+  font-size: 15px;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 7px;
+}
+
+#sign-up-box input:focus{
+  background-color: rgb(230, 237, 254);
+  border: 1px solid rgb(180, 180, 180);
+  outline:none;
+}
+
+#Username-section{
+  display: inline-block;
+  padding: 25px 10px 0 10px;
+}
+
+#Email-section, #Password-section{
+  display:inline-block;
+  padding: 15px 10px 0 10px;
+}
+
+.text-section{
+  padding: 15px 30px;
+  color: rgb(103, 103, 103);
+  font-size: 13px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.link-text{
+  text-decoration: none;
+  color: rgb(60, 60, 255);
+}
+
+.text-section a{
+  text-decoration: none;
+}
+
+#main-sign-up-btn{
+  height: 65px;
+  width: 440px;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: rgb(67, 202, 90);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 110%;
+  color: white;
+  cursor: pointer;
+}
+
+#main-sign-up-btn:hover{
+  background-color: rgb(81, 180, 98);
+  color: rgb(220, 220, 220);
+}
+
+.button-font:hover{
+  color: rgba(255, 255, 255, 0.785);
+}
+
+#upper-sign-up-btn:hover{
+  background-color: rgba(114, 114, 114, 0.517);
+}
+
+.lower-section{
+  height:255px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: visible;
+}
+
+.lower-section img{
+  padding-right: 120px;
+}
