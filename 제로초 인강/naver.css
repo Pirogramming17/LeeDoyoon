@@ -71,15 +71,14 @@ header{
    #header-search h1 : 자손을 찾는 것 */
 #header-search h1{
     display: inline-block;
-    width: 222px;
-    height: 52px;
+    width: 198px;
+    height: 48px;
     /*  
     background-position: 0 -158px;
     background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
     background-repeat: no-repeat;
     */
-    background: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png) 0px -158px no-repeat;
-    background-size: 457px 434px;
+    background: url(img//sp_search.png) -4px -4px no-repeat;
     vertical-align: middle;
     position: relative;
     top: -5px;
@@ -103,7 +102,7 @@ header{
 }
 
 #header-search fieldset{
-    margin-left: 20px;
+    margin-left: 18px;
     padding: 12px 0 12px 10px;
     width: 521px;
     height: 49px;
@@ -114,25 +113,46 @@ header{
 }
 
 #header-search fieldset input{
-    width: 444px;
-    height: 24px;
-    padding: 13px 15px;
-    margin: 1px;
+    width: 395px;
+    height: 23px;
     border: none;
     outline: none;
+    padding: 0;
     vertical-align: top;
 }
 
 #header-search fieldset button{
-    width: 56px;
-    height: 56px;
+    width: 49px;
+    height: 49px;
     border: none;
     padding: 0;
     background: #19ce60;
     position: absolute;
     top: -2px;
-    right: 0;
-    bottom: 0;
+    right: -2px;
+    
+}
+
+#search-keyboard{
+    background-image: url(img/sp_search.png);
+    background-repeat: no-repeat;
+    background-position: -33px -60px;
+    width: 19px;
+    height: 11px;
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: middle;
+}
+
+#search-history{
+    background-image: url(img/sp_search.png);
+    background-repeat: no-repeat;
+    background-position: -87px -60px;
+    width: 9px;
+    height: 4px;
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: middle;
 }
 
 #search-image{
@@ -174,7 +194,10 @@ nav li{
 !important > inline style attribute > ID > 다른 attribute (class) > tag element순으로 높음
 금 : id
 은 : class
-동 : tag */
+동 : tag 
+nth-child() : 같은 태그이든 다른 태그이든 자식의 개수를 세어야하
+nth-type() : 같은 태그인 자식을 비교해야함*/
+
 nav li:first-child span:first-child {
     width: 25px;
     background-position: 0 -285px;
@@ -189,7 +212,7 @@ nav li span:first-child {
     margin-left: 10px;
 }ㄴ
 
-nav li:nth-child(2) span:first-child {
+nnav li:nth-child(2) span:first-child {
     width: 27px;
     background-position: -279px -52px;
 }
@@ -212,6 +235,61 @@ nav li:nth-child(5) span:first-child {
 nav li:nth-child(6) span:first-child {
     width: 25px;
     background-position: -70px -285px;
+}
+
+nav li:nth-child(7) span:first-child {
+    width: 35px;
+    background-position: -125px -130px;
+}
+
+nav li:nth-child(8) span:first-child {
+    width: 26px;
+    background-position: -279px -208px;
+}
+
+nav li:nth-child(9) span:first-child {
+    width: 26px;
+    background-position: -128px -104px;
+}
+
+nav li:nth-child(10) span:first-child {
+    width: 26px;
+    background-position: -36px -259px;
+}
+
+nav li:nth-child(11) span:first-child {
+    width: 39px;
+    background-position: -151px -156px;
+}
+
+nav li:nth-child(12) span:first-child {
+    width: 26px;
+    background-position: -279px -130px;
+}
+
+nav li:nth-child(13) span:first-child {
+    width: 26px;
+    background-position: -234px -233px;
+}
+
+nav li:nth-child(14) span:first-child {
+    width: 26px;
+    background-position: -72px -259px;
+}
+
+nav li:nth-child(15) span:first-child {
+    width: 13px;
+    background-position: -140px -78px;
+}
+
+nav li:nth-child(16) span:first-child {
+    width: 26px;
+    background-position: -279px 0;
+}
+
+nav li.more:first-child span:first-child {
+    width: 55px;
+    background-position: 0 -104px;
 }
 
 .nav-divider{
