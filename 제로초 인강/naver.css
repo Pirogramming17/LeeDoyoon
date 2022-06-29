@@ -352,6 +352,13 @@ main{
     margin-bottom: 8px;
 }
 
+/* inline-block간의 간격 존재 
+1. html에서 enter친 것을 없애줌
+2.  float:left;를 사용 (가장 최선)
+-> 이를 감싸고 있는 부모가 inline-block을 인식하지 못하기에 부모에게 overflow:auto 또는 display:inline-block, width:100% 부여
+3.  margin을 -값으로 줌(브라우저마다 픽셀 크기가 다를 수 있기에 주의)
+4. inline-block을 감싸고 있는 block의 폰트 사이즈를 0으로 줌 -> 폰트가 안보이기에 자식들에게 폰트 사이즈를 원래대로 되돌려주어야함*/
+
 #main-login{
     float: left;
     width: 332px;
