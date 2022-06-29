@@ -1,15 +1,8 @@
-/* CSS: Cascading Style Sheet */
-/* parent에 적용된 속성이 child에게 덮어씌워짐 */
-/* 선택자 (selector) */
-
-/* class와 ID의 차이점
-ID: 고유한 것 
-clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러개 클래스 동시 적용 가능 */
 * {
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     margin: 0;
     padding: 0;
     font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
@@ -23,13 +16,13 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
 }
 
-.float-left{
-    float:left;
+.float-left {
+    float: left;
 }
 
-#fixed{
+#fixed {
     position: fixed;
-    top: 50px;
+    bottom: 50px;
     right: 50px;
     display: inline-block;
     width: 100px;
@@ -38,7 +31,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50px;
 }
 
-.blind{
+/* Cascading Style Sheet */
+/* 선택자(selector) */
+.blind {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -47,38 +42,40 @@ h1, h2, h3, h4, h5, h6 {
     height: 1px;
 }
 
-.relative{
+.relative {
     position: relative;
 }
 
-
-.center-align{
+.center-align {
     margin: 0 auto;
     width: 1080px;
 }
 
-header{
+header {
     height: 170px;
 }
 
-#header-top{
+#header-top {
     float: right;
     margin-top: 8px;
 }
 
-#header-top span{
+#header-top span {
     color: #888;
     letter-spacing: -1px;
     font-size: 11px;
     line-height: 22px;
 }
 
-#header-search{
+#header-search {
     clear: both;
-    padding-top: 12px;
+    padding-top: 45px;
 }
-/* #header-search > h1 : 자식을 찾는 것( (바로 아래 들어있는)
-   #header-search h1 : 자손을 찾는 것 */
+
+#header-search a {
+    text-decoration: none;
+}
+
 #header-search h1 {
     width: 198px;
     height: 48px;
@@ -93,56 +90,51 @@ header{
     left: 1px;
 }
 
-
-#header-search a{
-    text-decoration: none;
-}
-
 #header-search h1 span {
     display: none;
 }
 
-#header-search h2{
-    /* screen reader에게도 보이지 않음
-    그렇다면 존재하는 이유는? html이 문서 역할을 하기 때문에 html에서 두번째로 중요한 역할이라는 것을 알려주기 위해 존재
-    screen reader에게는 보이지만 사람 눈에는 안보이게 하기 위해서 */
+#header-search h2 {
     display: none;
 }
 
-#header-search fieldset{
+#header-search fieldset {
     margin-left: 18px;
+    /*padding-top: 12px;*/
+    /*padding-bottom: 12px;*/
+    /*padding-left: 10px;*/
+    /*padding-right: 0;*/
     padding: 12px 0 12px 10px;
     width: 521px;
     height: 49px;
     display: inline-block;
-    border: 2px solid #19ce60;
+    border: 2px solid #03cf5d; /* hex */
     vertical-align: middle;
     position: relative;
 }
 
-#header-search fieldset input{
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
     width: 395px;
     height: 23px;
-    border: none;
-    outline: none;
-    padding: 0;
-    vertical-align: top;
 }
 
-#header-search fieldset button{
+#header-search fieldset button {
     width: 49px;
     height: 49px;
     border: none;
     padding: 0;
-    background: #19ce60;
+    background: #03cf5d;
     position: absolute;
-    top: -2px;
     right: -2px;
-    
+    top: -2px;
 }
 
-#search-keyboard{
-    background-image: url(img/sp_search.png);
+#search-keyboard {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
     background-repeat: no-repeat;
     background-position: -33px -60px;
     width: 19px;
@@ -152,8 +144,8 @@ header{
     vertical-align: middle;
 }
 
-#search-history{
-    background-image: url(img/sp_search.png);
+#search-history {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
     background-repeat: no-repeat;
     background-position: -87px -60px;
     width: 9px;
@@ -163,44 +155,28 @@ header{
     vertical-align: middle;
 }
 
-#search-image{
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
-    background-position: -420px 0;
+#search-image {
+    background-image: url(img/sp_search.png);
+    background-position: -3px -60px;
     background-repeat: no-repeat;
-    background-size: 457px 434px;
-    /*  세로 가운데 정렬
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    */
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin: 14px;
 }
 
-nav{
+nav {
     height: 46px;
     border-top: 1px solid #f1f3f6;
     border-bottom: 1px solid #d1d8e4;
-    
 }
 
-nav ul{
+nav ul {
     display: inline-block;
     margin: 0;
     padding: 16px 0 0 4px;
     list-style: none;
 }
-
-/* css 우선순위 존재함 
-기본적으로 뒤에 나오는 css가 우선순위가 높음
-!important > inline style attribute > ID > 다른 attribute (class) > tag element순으로 높음
-금 : id
-은 : class
-동 : tag 
-nth-child() : 같은 태그이든 다른 태그이든 자식의 개수를 세어야하
-nth-type() : 같은 태그인 자식을 비교해야함*/
 
 #nav-menu li {
     display: inline-block;
@@ -351,29 +327,16 @@ nth-type() : 같은 태그인 자식을 비교해야함*/
     display: inline-block;
 }
 
-
-#rank-number{
+#rank-number {
     margin-top: -9px;
     color: #00ab33;
     font-size: 16px;
 }
 
-#rank-title{
+#rank-title {
     letter-spacing: -1px;
     font-size: 14px;
 }
-
-/* margin collapsing : 상, 하의 margin이 겹쳤을 때 없어지는 현상 발생
--> padding이 안전함 (a 태그의 경우 padding부분까지 클릭하면 링크로 넘어감) 
-1. 형제 간의 margin collapsing
-2. 부모, 마지막 child간의 margin collapsing
-3. 빈 태그일 때 / contents 가 없을 때 + height가 없을 때
-
-해결책 (block format context 만들기)
-1. overflow: hidden 또는 overflow: auto -> 자식이 보이지 않거나 스크롤이 생김
-2. float: left; width: 100%; 사용 -> 부모, 자식 모두 보임
-3. display: inline-block으로 만들고, width:100%를 줌 -> 세가지 케이스 모두 해결 가능한 방법
-*/
 
 main {
     background-color: #f2f4f7;
@@ -381,20 +344,18 @@ main {
     width: 100%;
 }
 
-#main-centered{
+#main-centered {
     padding: 8px 10px;
     width: 1100px;
 }
 
-#main-first-block{
-    /* float:left인 자식을 인식하기 위한 방법 */
+#main-first-block {
     display: inline-block;
     width: 100%;
-    /* inline-block이 여러개 연속되면 간격에 문제 발생 -> 세로는 vertical align:top으로 해결 */
     vertical-align: top;
 }
 
-#main-ad{
+#main-ad {
     float: left;
     width: 740px;
     height: 120px;
@@ -403,14 +364,7 @@ main {
     margin-bottom: 8px;
 }
 
-/* inline-block간의 간격 존재 
-1. html에서 enter친 것을 없애줌
-2.  float:left;를 사용 (가장 최선)
--> 이를 감싸고 있는 부모가 inline-block을 인식하지 못하기에 부모에게 overflow:auto 또는 display:inline-block, width:100% 부여
-3.  margin을 -값으로 줌(브라우저마다 픽셀 크기가 다를 수 있기에 주의)
-4. inline-block을 감싸고 있는 block의 폰트 사이즈를 0으로 줌 -> 폰트가 안보이기에 자식들에게 폰트 사이즈를 원래대로 되돌려주어야함*/
-
-#main-login{
+#main-login {
     float: left;
     width: 332px;
     height: 120px;
@@ -419,7 +373,41 @@ main {
     margin-bottom: 8px;
 }
 
-#main-second-block{
+#main-login .login-wrapper {
+    padding: 15px 25px;
+}
+
+#main-login .login-wrapper a {
+    display: block;
+}
+
+#main-login .login-text {
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#main-login .login-image {
+    margin-top: 12px;
+    background: url(img/sp_login.png) 0 -47px no-repeat;
+    display: inline-block;
+    width: 280px;
+    height: 37px;
+}
+
+#main-login .login-signup {
+    float: right;
+    font-size: 12px;
+    line-height: 38px;
+    color: #666;
+    text-decoration: none;
+}
+
+#main-login .login-signup:hover {
+    text-decoration: underline;
+}
+
+#main-second-block {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 8px;
@@ -436,7 +424,7 @@ main {
 }
 
 #main-ytn {
-    float: left;
+    display: inline-block;
     width: 740px;
     height: 46px;
     background-color: white;
@@ -463,14 +451,14 @@ main {
 }
 
 #main-newsstand ul {
+    display: inline-block;
     margin: 0;
-    padding: 0; 
+    padding: 0;
     list-style: none;
 }
 
 #main-newsstand li {
     float: left;
-    /* calc()내에서 계산 후 반환 */
     width: calc(100% / 6);
     height: 67px;
     border-right: 1px solid #f1f3f6;
@@ -518,7 +506,6 @@ main {
     margin-bottom: 8px;
 }
 
-/* iframe: 그 자체로 하나의 웹페이지 / 웹페이지 내의 또 다른 페이지 */
 #main-shopping iframe {
     width: 100%;
     height: 100%;
@@ -546,6 +533,3 @@ main {
     height: 130px;
     background: #555;
 }
-
-
-

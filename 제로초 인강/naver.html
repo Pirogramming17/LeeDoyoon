@@ -27,13 +27,16 @@
                         </h1>
                     </a>
                     <h2 class="blind">검색창</h2>
+                    <!-- 사용자가 입력하는 공간을 form으로 감싸줄 수 있음 
+                    form의 action에 주소를 넣어 해당 주소로 이동 가능-->
                     <form class="inline-block" action="https://search.naver.com/search.naver?sm=top_hty&fbm=0&ie=utf8&query="></form>
                         <fieldset>
                             <legend class="blind">검색</legend> <!-- legend : 범례 -->
                             <input /> <!-- input은 내부에 콘텐츠가 없어서 바로 태그 닫으면 됨 -->
                             <span id="search-keyboard"></span>
                             <span id="search-history"></span>
-                            <button type="submit">
+                            <!-- form 안에서 버튼 눌렀을 때 이동하지 않으려면 button type="button" 설정 필요 -->
+                            <button type="submit"> 
                                 <span class="blind">검색</span>
                                 <span id="search-image"></span>
                             </button>
@@ -128,9 +131,19 @@
             <div id="main-first-block">
                 <div id="main-ad"></div>
                 <div id="main-login">
-                    <h3 class="blind">로그인</h3>
+                    <h3 class="blind">로그인</h3>                    <div class="login-wrapper">
+                    <span class="login-text">네이버를 더 안전하고 편리하게 이용하세요.</span>
+                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+                    <span class="blind">NAVER 로그인</span>
+                    <span class="login-image"></span>
+                    </a>
+                    <a
+                    class="login-signup"
+                    href="https://nid.naver.com/nidregister.form?url=https%3A%2F%2Fwww.naver.com"
+                    >회원가입</a>
                 </div>
             </div>
+        </div>
 
         <div id="main-second-block">
             <div class="float-left">
@@ -184,6 +197,7 @@
             </div>
             <div id="main-third-ad"></div>
         </div>
+        </div>
     </main>
 
         <footer><!-- footer : 부가적인 정보 -->
@@ -193,3 +207,5 @@
         </footer>
     </body>
 </html>
+
+
