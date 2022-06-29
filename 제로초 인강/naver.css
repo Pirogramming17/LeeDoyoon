@@ -15,6 +15,14 @@ html, body{
     font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
 #fixed{
     position: fixed;
     top: 50px;
@@ -67,16 +75,14 @@ header{
 }
 /* #header-search > h1 : 자식을 찾는 것( (바로 아래 들어있는)
    #header-search h1 : 자손을 찾는 것 */
-#header-search h1{
-    display: inline-block;
+#header-search h1 {
     width: 198px;
     height: 48px;
-    /*  
-    background-position: 0 -158px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
-    background-repeat: no-repeat;
-    */
-    background: url(img//sp_search.png) -4px -4px no-repeat;
+    display: inline-block;
+    /*background-image: url(./sp_search.png);*/
+    /*background-position: -4px -10px;*/
+    /*background-repeat: no-repeat;*/
+    background: url(img/sp_search.png) -4px -4px no-repeat;
     vertical-align: middle;
     position: relative;
     top: -5px;
@@ -290,7 +296,7 @@ nav li.more:first-child span:first-child {
     background-position: 0 -104px;
 }
 
-.nav-divider{
+.nav-divider {
     display: inline-block;
     margin: 18px 16px 0;
     width: 1px;
@@ -298,7 +304,7 @@ nav li.more:first-child span:first-child {
     background: #ebeef3;
 }
 
-#search-ranking{
+#search-ranking {
     position: absolute;
     top: 16px;
     right: 100px;
@@ -327,7 +333,7 @@ nav li.more:first-child span:first-child {
 3. display: inline-block으로 만들고, width:100%를 줌 -> 세가지 케이스 모두 해결 가능한 방법
 */
 
-main{
+main {
     background-color: #f2f4f7;
     display: inline-block;
     width: 100%;
@@ -339,6 +345,7 @@ main{
 }
 
 #main-first-block{
+    /* float:left인 자식을 인식하기 위한 방법 */
     display: inline-block;
     width: 100%;
 }
@@ -375,6 +382,110 @@ main{
 #main-second-block .inline-block:last-child {
     width: 332px;
     vertical-align: top;
+}
+
+#main-ytn {
+    display: inline-block;
+    width: 740px;
+    height: 46px;
+    background-color: white;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+#main-ytn h3,
+#main-ytn ol {
+    display: inline-block;
+}
+
+#main-newsstand {
+    display: inline-block;
+    width: 740px;
+    height: 246px;
+    background-color: white;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+#main-newsstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#main-newsstand ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-newsstand li {
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center;
+}
+
+#main-newsstand li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main-weather {
+    display: inline-block;
+    width: 332px;
+    height: 142px;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+#main-second-ad {
+    display: inline-block;
+    width: 332px;
+    height: 150px;
+    background: #555;
+    margin-bottom: 8px;
+}
+
+#main-category {
+    float: left;
+    width: 740px;
+    height: 837px;
+    background: white;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+#main-shopping {
+    float: left;
+    width: 332px;
+    height: 837px;
+    background: white;
+    margin-bottom: 8px;
+}
+
+#main-third-block,
+#main-fourth-block {
+    display: inline-block;
+    width: 100%;
+}
+
+#main-event {
+    float: left;
+    width: 740px;
+    height: 130px;
+    background: white;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+#main-third-ad {
+    float: left;
+    width: 332px;
+    height: 130px;
+    background: #555;
 }
 
 
