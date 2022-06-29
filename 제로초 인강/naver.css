@@ -332,3 +332,43 @@ main{
     display: inline-block;
     width: 100%;
 }
+
+#main-centered{
+    padding: 8px 10px;
+    width: 1100px;
+}
+
+#main-first-block{
+    display: inline-block;
+    width: 100%;
+}
+
+#main-ad{
+    float: left;
+    width: 740px;
+    height: 120px;
+    background: #555;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+#main-login{
+    float: left;
+    width: 332px;
+    height: 120px;
+    vertical-align: top;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+#main-second-block .inline-block:first-child {
+    width: 740px;
+}
+
+#main-second-block .inline-block:last-child {
+    width: 332px;
+    vertical-align: top;
+}
+
+
+
