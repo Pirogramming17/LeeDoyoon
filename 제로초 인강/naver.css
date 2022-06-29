@@ -12,6 +12,7 @@ clss : 같은 클래스 이름을 여러번 사용 가능, 한 태그에 여러�
 html, body{
     margin: 0;
     padding: 0;
+    font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
 }
 
 #fixed{
@@ -60,6 +61,8 @@ header{
     line-height: 22px;
 }
 
+/* margin collapsing : 상, 하의 margin이 겹쳤을 때 없어지는 현상 발생
+-> padding이 안전함 (a 태그의 경우 padding부분까지 클릭하면 링크로 넘어감) */
 #header-search{
     clear: both;
     padding-top: 12px;
@@ -77,15 +80,15 @@ header{
     */
     background: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png) 0px -158px no-repeat;
     background-size: 457px 434px;
+    vertical-align: middle;
     position: relative;
-    top: -3px;
+    top: -5px;
+    left: 1px;
 }
-
 
 
 #header-search a{
     text-decoration: none;
-    vertical-align: middle;
 }
 
 #header-search h1 span {
@@ -100,18 +103,13 @@ header{
 }
 
 #header-search fieldset{
-    width: 520px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#header-search fieldset{
     margin-left: 20px;
     padding: 12px 0 12px 10px;
-    width: 586px;
-    height: 56px;
+    width: 521px;
+    height: 49px;
     display: inline-block;
     border: 2px solid #19ce60;
+    vertical-align: middle;
     position: relative;
 }
 
@@ -135,7 +133,6 @@ header{
     top: -2px;
     right: 0;
     bottom: 0;
-
 }
 
 #search-image{
@@ -154,9 +151,17 @@ header{
     */
 }
 
+nav{
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #d1d8e4;
+    
+}
+
 nav ul{
+    display: inline-block;
     margin: 0;
-    padding: 0;
+    padding: 16px 0 0 4px;
     list-style: none;
 }
 
@@ -181,7 +186,7 @@ nav li span:first-child {
     display: inline-block;
     background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
     background-repeat: no-repeat;
-    margin-left: 14px;
+    margin-left: 10px;
 }ㄴ
 
 nav li:nth-child(2) span:first-child {
@@ -207,4 +212,24 @@ nav li:nth-child(5) span:first-child {
 nav li:nth-child(6) span:first-child {
     width: 25px;
     background-position: -70px -285px;
+}
+
+.nav-divider{
+    display: inline-block;
+    margin: 18px 16px 0;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+}
+
+#search-ranking{
+    position: absolute;
+    top: 16px;
+    right: 100px;
+}
+
+#rank-number{
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
 }
