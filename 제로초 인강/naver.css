@@ -348,6 +348,8 @@ main {
     /* float:left인 자식을 인식하기 위한 방법 */
     display: inline-block;
     width: 100%;
+    /* inline-block이 여러개 연속되면 간격에 문제 발생 -> 세로는 vertical align:top으로 해결 */
+    vertical-align: top;
 }
 
 #main-ad{
@@ -385,7 +387,7 @@ main {
 }
 
 #main-ytn {
-    display: inline-block;
+    float: left;
     width: 740px;
     height: 46px;
     background-color: white;
@@ -414,13 +416,14 @@ main {
 
 #main-newsstand ul {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     list-style: none;
 }
 
 #main-newsstand li {
     float: left;
-    width: 123px;
+    /* calc()내에서 계산 후 반환 */
+    width: calc(100% / 6);
     height: 67px;
     border-right: 1px solid #f1f3f6;
     border-bottom: 1px solid #f1f3f6;
@@ -439,6 +442,7 @@ main {
     height: 142px;
     background-color: white;
     margin-bottom: 8px;
+    vertical-align: top;
 }
 
 #main-second-ad {
@@ -447,6 +451,7 @@ main {
     height: 150px;
     background: #555;
     margin-bottom: 8px;
+    vertical-align: top;
 }
 
 #main-category {
@@ -456,6 +461,7 @@ main {
     background: white;
     margin-bottom: 8px;
     margin-right: 8px;
+    vertical-align: top;
 }
 
 #main-shopping {
@@ -464,6 +470,7 @@ main {
     height: 837px;
     background: white;
     margin-bottom: 8px;
+    vertical-align: top;
 }
 
 #main-third-block,
