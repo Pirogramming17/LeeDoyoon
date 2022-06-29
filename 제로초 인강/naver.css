@@ -61,8 +61,6 @@ header{
     line-height: 22px;
 }
 
-/* margin collapsing : 상, 하의 margin이 겹쳤을 때 없어지는 현상 발생
--> padding이 안전함 (a 태그의 경우 padding부분까지 클릭하면 링크로 넘어감) */
 #header-search{
     clear: both;
     padding-top: 12px;
@@ -310,4 +308,27 @@ nav li.more:first-child span:first-child {
     margin-top: -9px;
     color: #00ab33;
     font-size: 16px;
+}
+
+#rank-title{
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+/* margin collapsing : 상, 하의 margin이 겹쳤을 때 없어지는 현상 발생
+-> padding이 안전함 (a 태그의 경우 padding부분까지 클릭하면 링크로 넘어감) 
+1. 형제 간의 margin collapsing
+2. 부모, 마지막 child간의 margin collapsing
+3. 빈 태그일 때 / contents 가 없을 때 + height가 없을 때
+
+해결책 (block format context 만들기)
+1. overflow: hidden 또는 overflow: auto -> 자식이 보이지 않거나 스크롤이 생김
+2. float: left; width: 100%; 사용 -> 부모, 자식 모두 보임
+3. display: inline-block으로 만들고, width:100%를 줌 -> 세가지 케이스 모두 해결 가능한 방법
+*/
+
+main{
+    background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
 }
