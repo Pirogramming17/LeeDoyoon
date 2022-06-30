@@ -569,7 +569,7 @@ main {
     font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
 }
 
-/* 그래디언트, 마스크 이미지 효과도 존재함 */
+/* 그래디언트, 마스크 이미지 효과도 존재함*/
 .opacity {
     opacity: 0.5;
     background: white;
