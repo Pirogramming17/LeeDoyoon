@@ -423,6 +423,14 @@ main {
     vertical-align: top;
 }
 
+#main-ytn h3, #main-newsstand h3 {
+    font-size: 14px;
+    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    padding-top: 15px;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
 #main-ytn {
     display: inline-block;
     width: 740px;
@@ -643,6 +651,16 @@ main {
     background-position: -320px -52px;
 }
 
+/* 구획별로 센션 나누는 것이 좋음 - sementic tag */
 section {
     border: 1px solid #dee3eb;
 }
+
+/* css 파일이 길어지면 여러개로 나누어서 만드는 것이 좋음 (html에서 여러개의 파일 불러오면 되기 때문) 
+
+공통으로 쓰이는 스타일들은 html내의 style tag에 넣으면 됨 
+-> 구글은 해당 방식을 더 추천 (html 파일이 아닌 외부 파일을 불러오는데 로딩 시간이 필요하기 때문))
+->실무, 고객 관점의 이유
+->순서 조심해야함(아래있는 것이 우선순위가 높음)
+
+*/
