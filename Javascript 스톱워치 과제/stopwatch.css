@@ -1,0 +1,161 @@
+@import url(./reset.css);
+
+.align--center{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.stopwatch{
+  flex-direction: column;
+}
+
+.stopwatch--body{
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+.header--text{
+  margin-bottom: 10px;
+}
+
+.header--text i{
+  margin-right: 8px;
+}
+
+.header--text h1{
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 3px;
+}
+
+.stopwatch--operator{
+  flex-direction: column;
+  background-color: rgb(255, 213, 89);
+  width: 400px;
+  height: 200px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px grey;
+}
+
+.time--section{
+  width: 300px;
+  height: 45px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.time--section span{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.button--section{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  padding-top:20px;
+}
+
+.start--btn,
+.stop--btn,
+.reset--btn{
+  width: 45px;
+  height: 45px;
+  color: white;
+  background-color: rgb(255, 123, 111);
+  cursor: pointer;
+  border: none;
+  border-radius: 40%;
+  padding:0;
+}
+
+.start--btn:hover,
+.stop--btn:hover,
+.reset--btn:hover{
+  background-color:rgb(255, 89, 73);
+
+}
+
+.record--section{
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.record--header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  height: 50px;
+  background-color: rgb(255, 213, 89);
+}
+
+.trash--btn {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.trash--btn:hover{
+  color: rgb(255, 107, 93);
+}
+
+.record--title{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: rgb(255, 107, 93);
+}
+
+.recordlist--section{
+  display: flex;
+  flex-direction: column;
+  padding-left : 63px;
+  padding-top : 10px;
+  overflow: auto;
+}
+
+.licheckbox{
+  margin-right : 125px;
+}
+
+.record--text {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#record--list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.li-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/40607578ab.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./stopwatch.css">
+  <title>Stopwatch</title>
+</head>
+<body>
+  <div class="align--center stopwatch">
+    <section class="align--center stopwatch--body">
+      <div class="align--center header--text">
+        <i class="fa-solid fa-stopwatch fa-lg"></i>
+        <h1>피로그래밍 스톱워치</h1>
+      </div>
+      <div class="align--center stopwatch--operator">
+        <div class="time--section">
+          <span id="seconds">00</span>
+          <span>:</span>
+          <span id="milliseconds">00</span>
+        </div>
+        <div class="align--center button--section">
+          <button class="start--btn" id="start--btn">start</button>
+          <button class="stop--btn" id="stop--btn">stop</button>
+          <button class="reset--btn" id="reset--btn">reset</button>
+        </div>
+      </div>
+    </section>
+    <section class="record--section">
+      <div class="record--header">
+        <input type="checkbox" class="checkbox" value="checkAll" onclick="selectAll(this)">
+        <h1 class="record--title">구간기록</h1>
+        <button class="trash--btn">
+          <i class="fa-solid fa-trash-can fa-lg"></i>
+        </button>
+      </div>
+      <div class="recordlist--section">
+        <ul id="record--list">
+          <li class="li-item">
+            <input type="checkbox" class="licheckbox hidden" name="rowcheck">
+            <span class="record--text hidden"></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script src="./stopwatch.js"></script>
+</body>
+</html>
