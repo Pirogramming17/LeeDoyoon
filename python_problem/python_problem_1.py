@@ -1,6 +1,7 @@
 num = 0 #입력 받는 숫자(1,2,3 중 하나)
 cnt = 1 #1부터 31까지 카운트 누적
 
+# player A
 while(True):
   try:
     num = int(input("부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) : "))
@@ -12,3 +13,6 @@ while(True):
     else:
       break;
   
+for i in range(0, num):
+  print("playerA : " , cnt)
+  cnt += 1
