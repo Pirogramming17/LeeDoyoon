@@ -1,3 +1,5 @@
+import random
+
 cnt = 1 #1부터 31까지 카운트 누적
 
 def brGame():
@@ -14,27 +16,27 @@ def brGame():
         break;
   return num  
 
-
 while(cnt <= 31):
-    # player A
-  A = brGame()
-  for i in range(0, A):
+    # Computer
+  comNum = random.randint(1,3)
+  for i in range(0, comNum):
     if cnt > 31:
       break;
     else: 
-      print("playerA : " , cnt)
+      print("computer : " , cnt)
       cnt += 1
   if(cnt > 31):
-    print("playerB win!")
+    print("player win!")
     break;
-    # player B
-  B = brGame()
-  for i in range(0, B):
+    
+    # player
+  playNum = brGame()
+  for i in range(0, playNum):
     if cnt > 31:
       break;
     else: 
-      print("playerB : ", cnt)
+      print("player : ", cnt)
       cnt += 1
   if(cnt > 31):
-    print("playerA win!")
+    print("computer win!")
     break;
