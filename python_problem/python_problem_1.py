@@ -20,6 +20,7 @@ while(cnt <= 31):
       print("playerA : " , cnt)
       cnt += 1
   if(cnt > 31):
+    print("playerB win!")
     break;
     # player B
   while(True):
@@ -39,4 +40,5 @@ while(cnt <= 31):
       print("playerB : ", cnt)
       cnt += 1
   if(cnt > 31):
+    print("playerA win!")
     break;
