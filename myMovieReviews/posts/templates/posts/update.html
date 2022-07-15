@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/update.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <title>My Movie reviews</title>
+</head>
+<body>
+  <div class="header">
+    <div class="header--left">
+      <a href="{% url 'posts:review_list' %}">my <span>Movie</span> reviews</a>
+    </div>
+    <div class="header--right">
+      <!-- 리뷰 작성 페이지로 이동 -->
+      <a href="{% url 'posts:create' %}">Add a New review</a>
+    </div>
+  </div>
+
+  <section class="form--background">
+    <div class="form--title">
+      <p><span>Movie</span> review</p>
+      <img src="../../static/img/popcorn.png" alt="">
+    </div>
+    <div class="form--content">
+      <form action="{% url 'posts:update' post.id %}" method="POST">
+        {% csrf_token %}
+        <p>제목 : <input type="text" name="title" value="{{post.title}}"></p>
+        <p>개봉년도 : <input type="number" name="date" value="{{post.date}}"></p>
+        <p>장르 : <input type="text" name="genre" value="{{post.genre}}">
+        </p>
+        <p>별점 : <input type="text" name="score" value="{{post.score}}"></p>
+        <p>러닝타임 : <input type="text" name="runningtime" value="{{post.runningtime}}"></p>
+        <p>리뷰 :</p>
+        <textarea name="reviewcontent" id="contents" rows="15">{{post.reviewcontent}}</textarea>
+        <p>감독 : <input type="text" name="director" value="{{post.director}}"></p>
+        <p>배우 : <input type="text" name="actors" value="{{post.actors}}"></p>
+        <div class="save--btn">
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

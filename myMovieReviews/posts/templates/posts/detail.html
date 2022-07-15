@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <title>My Movie reviews</title>
+</head>
+<body>
+  <div class="header">
+    <div class="header--left">
+      <a href="{% url 'posts:review_list' %}">my <span>Movie</span> reviews</a>
+    </div>
+    <div class="header--right">
+      <!-- 리뷰 작성 페이지로 이동 -->
+      <a href="{% url 'posts:create' %}">Add a New review</a>
+    </div>
+  </div>
+
+  <div class="detail--top">
+    <div class="detail--top--left">
+      <h1 class="review--title">{{post.title}}</h1>
+    </div>  
+    <div class="detail--top--right">
+      <button>
+        <a href="{% url 'posts:update' post.id %}"><span>수정</span></a>
+      </button>
+      <form action="{%url 'posts:delete' post.id%}" method="POST">
+        {% csrf_token %}
+        <button>삭제</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="detail--content">
+    <div class="detail--content--list">
+      <p><span class="text--color">개봉년도 </span><span>{{post.date}}</span></p>
+      <p><span class="text--color">감독 </span><span>{{post.director}}</span></p>
+      <p><span class="text--color">주연 </span><span>{{post.actors}}</span></p>
+      <p><span class="text--color">장르 </span><span>{{post.genre}}</span></p>
+      <p><span class="text--color">별점 </span><span>{{post.score}}</span></p>
+      <p><span class="text--color">러닝타임 </span><span>{{post.runningtime}}</span></p>
+    </div>
+    <div class="review--content">
+      <p>{{post.reviewcontent}}</p>
+    </div>
+  </div>
+
+</body>
+</html>

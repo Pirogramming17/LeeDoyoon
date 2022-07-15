@@ -1,0 +1,83 @@
+@import url('./reset.css');
+
+body{
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail--top{
+  width: 90%;
+  height: 70px;
+  display:flex;
+  justify-content: space-between;
+  margin: 40px 0 10px 0;
+}
+
+.detail--top--left{
+  display: flex;
+  align-items: center;
+}
+
+.detail--top--left h1{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.detail--top--right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail--top--right button{
+  background-color: transparent;
+  border: 0;
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+  cursor: pointer;
+}
+
+.detail--top--right a{
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+}
+
+.detail--top--right a:hover{
+  color: black;
+}
+
+.detail--top--right button:hover{
+  color: rgb(255, 0, 0);
+}
+
+.detail--content{
+  width:90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail--content--list{
+  height: 100%;
+  background-color: rgb(230, 230, 230);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.detail--content--list p{
+  margin: 15px 0;
+}
+
+.text--color{
+  color: rgb(90, 90, 90);
+  margin-right: 10px;
+}
+
+.review--content{
+  padding: 20px;
+  background-color: rgb(230, 230, 230);
+  line-height: 25px;
+}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/review_list.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <title>My Movie reviews</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header--left">
+      <a href="{% url 'posts:review_list' %}">my <span>Movie</span> reviews</a>
+    </div>
+    <div class="header--right">
+      <!-- 리뷰 작성 페이지로 이동 -->
+      <a href="{% url 'posts:create' %}">Add a New review</a>
+    </div>
+  </div>
+  
+  <section class="main--list">
+    {% for post in posts %}
+    <article>
+      <a href="{% url 'posts:detail' post.id %}">
+        <span>{{post.title}}</span>
+      </a>
+      <p>개봉년도 : {{post.date}} 년</p>
+      <p>장르 : {{post.genre}} </p>
+      <p>별점 : {{post.score}} </p>
+    </article>
+      {% endfor %}
+  </section>  
+</body>
+</html>
