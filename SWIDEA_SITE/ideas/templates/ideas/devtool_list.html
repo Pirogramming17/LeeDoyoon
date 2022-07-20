@@ -1,0 +1,18 @@
+{% extends 'ideas/base.html' %}
+{% block content %}
+<div class="title--top">
+  <span>DevTool List</span>
+  <p>개발툴 목록 페이지 입니다. 자신이 사용가능한 개발툴의 목록을 확인해 보세요.</p>
+</div>
+{% for devtool in devtool %}
+  <section>
+    <div>
+      <a href="{% url 'ideas:devtool_detail' devtool.id %}">
+        {{ devtool.name }}
+      </a>
+      <p>{{ devtool.kind }}</p>
+      <p>{{ devtool.content }}</p>
+    </div>
+  </section>
+  {% endfor %}
+{% endblock %}

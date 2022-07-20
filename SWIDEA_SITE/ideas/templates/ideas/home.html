@@ -1,0 +1,36 @@
+{% extends 'ideas/base.html' %}
+{% block content %}
+  <div class="idealist--top">
+    <span>Idea List</span>
+    <p>나의 아이디어를 잊지 말고 기록해보세요</p>
+  </div>
+  <!-- choiceField 받아오기 -->
+  <form action="{% url 'ideas:home' %}" method="GET">
+    <select name="orderby">
+      <option value="">---------</option>
+      <option value="recent">최신순</option>
+      <option value="create">등록순</option>
+      <option value="name">이름순</option>
+      <option value="select">찜하기순</option>
+      <option value="interest">관심도순</option>
+    </select>
+    <input type="submit" value="검색">
+  </form>
+
+  {% for idea in idea %}
+  <section>
+    {% if idea.image %}
+    <p>
+      <img src="{{ idea.image.url }}" style="width:30px; height:30px" />
+    </p>
+    {% endif %}
+    <div>
+      <a href="{% url 'ideas:idea_detail' idea.id %}">
+        {{ idea.title }}
+      </a>
+      <p>예상 개발 툴 : {{ idea.devtool.name }}</p>
+      <p>아이디어 관심도 : {{ idea.interest }}</p>
+    </div>
+  </section>
+  {% endfor %}
+{% endblock %}

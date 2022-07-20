@@ -1,0 +1,18 @@
+{% extends 'ideas/base.html' %}
+{% block content %}
+<div>
+  <h2>DevTool Register</h2>
+  <p>개발툴 등록 페이지입니다. 자신이 다룰 수 있는 개발툴을 등록해보세요.</p>
+</div>
+<form action="{% url 'ideas:devtool_create' %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p>이름:
+    <input type="text" name="name" /></p>
+    <p>종류:
+      <input type="text" name="kind" /></p>
+  <p>개발툴 설명:
+    <textarea name="content" id="content" rows="10"></textarea>
+  </p>
+  <div><input type="submit" value="SUBMIT"></div>
+</form>
+{% endblock %}

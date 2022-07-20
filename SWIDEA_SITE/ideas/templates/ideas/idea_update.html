@@ -1,0 +1,29 @@
+{% extends 'ideas/base.html' %}
+{% block content %}
+<form action="{% url 'ideas:idea_update' idea.id %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p>아이디어 명: 
+    <input type="text" name="title" value="{{idea.title}}" /></p>
+  <p>Image:
+    Currently: {{idea.image.url}}
+  </p>
+  <p>
+    Change: <input type="file" name="image">
+  </p>
+  <p>아이디어 설명:
+    <textarea name="content" id="content" rows="10">{{idea.content}}</textarea>
+  </p>
+  <p>아이디어 관심도:
+    <input type="number" name="interest" value="{{idea.interest}}">
+  </p>
+  <p>예상 개발툴:
+    <select name="devtool" id="devtool">
+      <option value="{{ idea.devtool.name }}">{{idea.devtool.name}}</option>
+      {% for devtool in devtool %}
+      <option value="{{ devtool.name }}">{{devtool.name}}</option>
+      {% endfor %}
+    </select>
+  </p> 
+  <div><input type="submit" value="SUBMIT"></div>
+</form>
+{% endblock %}

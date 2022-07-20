@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My SW Idea Manage</title>
+</head>
+<nav>
+  <div class="nav--left">My <span>SW IDEA </span>Manage</div>
+  <div class="nav--right">
+    <div><a href="{% url 'ideas:idea_create' %}"> 아이디어 등록 </a></div>
+    <div><a href="{% url 'ideas:home' %}"> 아이디어 관리 </a></div>
+    <div><a href="{% url 'ideas:devtool_create' %}"> 개발툴 등록 </a></div>
+    <div><a href="{% url 'ideas:devtool_list' %}"> 개발툴 관리 </a></div>
+  </div>
+</nav>
+<body>
+  {% block content %}
+  {% endblock %} 
+</body>
+</html>
