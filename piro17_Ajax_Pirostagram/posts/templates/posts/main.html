@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/40607578ab.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pirostagram</title>
+</head>
+<body>
+  <section class="main--page">
+  <div class="header">
+    <div class="header--left">
+      <div class="profile--img">
+        <img src="{% static 'image/profile.PNG' %}">
+      </div>
+      <span class="writer--name">{{user.username}}</span>
+    </div>
+    <div class="header--right">
+      <i class="fa-solid fa-ellipsis"></i>
+    </div>
+  </div>
+
+  <div class="main">
+    <img src="{% static 'image/cafe.jpg' %}" class="main--image">
+
+    <div class="icon--section">
+
+      <div class="icon--left">
+        <div class="icon">
+          <div class="like" id="like_{{ post.id }}" onclick="onClickLike({{post.id}})">
+            {% if post.like == False %}
+            <i id="post_like_{{ post.id }}" class="fa-regular fa-heart"></i>
+            {% else %}
+            <i id="post_like_{{ post.id }}" class="fa-solid fa-heart"></i>
+            {% endif %}
+        </div>
+        <div class="icon">
+          <i class="fa-regular fa-comment"></i>
+        </div>
+        <div class="icon">
+          <i class="fa-regular fa-paper-plane"></i>
+        </div>
+      </div>
+    </div>
+    <div class="icon--right">  
+      <i class="fa-regular fa-bookmark"></i>
+      </div>
+    </div>
+    </div>
+
+    <div class="main--text">
+      <span class="post--username">{{user.username}}</span>
+      <span class="post--content">{{post.content}}</span>
+    </div>
+    <p class="more--comment">View all comments...</p>
+    
+
+    <div class="reply--section">
+      {% for reply in replies%}
+      <li id="reply_{{reply.id}}"  class="reply">
+        <div class="reply--content"><span>user</span>{{reply.content}}</div>
+        <div class="reply--btn">
+          <div class="del--reply">
+            <i class="fa-regular fa-trash-can" onclick="deleteReply({{reply.id}})"></i></button>
+          </div>
+          <div class="reply--like" id="reply{{ reply.id }}" onclick="onClickReplyLike({{reply.id}})">
+            {% if reply.like == False %}
+            <i id="reply_like_{{ reply.id }}" class="fa-regular fa-heart"></i>
+            {% else %}
+            <i id="reply_like_{{ reply.id }}" class="fa-solid fa-heart"></i>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor%}
+    </div>
+    <div class="add--reply">
+      <form action="/" method="post" class="add--form">
+        {% csrf_token %}
+        <i class="fa-regular fa-face-smile"></i>
+        <input class="reply--input" type="text" placeholder="Add a comment...">
+        <input type="submit" value="POST" class="post--btn">
+      </form>
+    </div>
+
+  </section>
+</body>
+<script>
+  // post 좋아요
+  const requestLike = new XMLHttpRequest();
+  const onClickLike = (id)=> {
+    const url = 'like_post/';
+    requestLike.open('POST', url, true);
+    requestLike.setRequestHeader(
+      'Content-Type',
+      'application/x-www-form-urlencoded'
+    );
+    requestLike.send(JSON.stringify({id:id}));
+  }
+  requestLike.onreadystatechange = () => {
+    if (requestLike.readyState === XMLHttpRequest.DONE) {
+      if(requestLike.status < 400){
+        const{id} = JSON.parse(requestLike.response);
+        const like = document.querySelector(`#post_like_${id}`);
+        if (like.classList.contains("fa-regular")) {
+          like.classList.remove("fa-regular");
+          like.classList.add("fa-solid");
+        } else {
+          like.classList.remove("fa-solid");
+          like.classList.add("fa-regular");
+        }
+      }
+    }
+  };
+
+  const requestReplyLike = new XMLHttpRequest();
+  const onClickReplyLike = (id)=> {
+    const url = 'like_reply/';
+    requestReplyLike.open('POST', url, true);
+    requestReplyLike.setRequestHeader(
+      'Content-Type',
+      'application/x-www-form-urlencoded'
+    );
+    requestReplyLike.send(JSON.stringify({id:id}));
+  }
+  requestReplyLike.onreadystatechange = () => {
+    if (requestReplyLike.readyState === XMLHttpRequest.DONE) {
+      if(requestReplyLike.status < 400){
+        const{id} = JSON.parse(requestReplyLike.response);
+        const replylike = document.querySelector(`#reply_like_${id}`);
+        if (replylike.classList.contains("fa-regular")) {
+          replylike.classList.remove("fa-regular");
+          replylike.classList.add("fa-solid");
+        } else {
+          replylike.classList.remove("fa-solid");
+          replylike.classList.add("fa-regular");
+        }
+      }
+    }
+  };
+
+  requestDelete = new XMLHttpRequest();
+    const deleteReply = (id) => {
+      const url = "delete_reply/";
+      requestDelete.open("POST",url,true);
+      requestDelete.setRequestHeader(
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+      );
+      requestDelete.send(JSON.stringify({id:id}));
+    }
+    requestDelete.onreadystatechange = () => {
+      if(requestDelete.readyState === XMLHttpRequest.DONE){
+        if(requestDelete.status < 400){
+          const {id} = JSON.parse(requestDelete.response);
+          const del_reply = document.querySelector(`#reply_${id}`);
+          del_reply.remove();
+        }
+      }
+    };
+
+</script>
+</html>
